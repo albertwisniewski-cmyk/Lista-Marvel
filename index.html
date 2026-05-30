@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Marvel">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#08080b">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="apple-touch-icon-precomposed" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="180x180" href="data:image/png;base64,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">
+<title>Marvel Watchlist</title>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700;800&display=swap');
+html, body { background: #08080b; color: #f4f4f5; font-family: 'Manrope', sans-serif; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; }
+.display { font-family: 'Anton', sans-serif; letter-spacing: .02em; }
+@keyframes pop { 0%{transform:scale(.6);opacity:0} 60%{transform:scale(1.15)} 100%{transform:scale(1);opacity:1} }
+.pop { animation: pop .25s ease-out; }
+.safe-top { padding-top: env(safe-area-inset-top); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+button { -webkit-tap-highlight-color: transparent; }
+</style>
+</head>
+<body class="safe-top safe-bottom">
+<div id="root"></div>
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useMemo } = React;
+
+const Check = ({size=15, className=""}) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <polyline points="20 6 9 17 4 12"/>
+  </svg>
+);
+const Film = ({size=12}) => (<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>);
+const Tv2 = ({size=12}) => (<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 21h10"/><rect width="20" height="14" x="2" y="3" rx="2"/></svg>);
+const Loader2 = ({size=18, className=""}) => (<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>);
+const Zap = ({size=10, fill="none"}) => (<svg width={size} height={size} viewBox="0 0 24 24" fill={fill} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>);
+const InfinityIcon = ({size=10}) => (<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>);
+
+const STORAGE_KEY = "marvel_watchlist_v1";
+
+const PLATFORMS = {
+  disney: { label: "Disney+", bg: "rgba(59,130,246,.16)", color: "#7cb3ff" },
+  netflix: { label: "Netflix", bg: "rgba(229,9,20,.18)", color: "#ff7074" },
+  wow: { label: "WOW / Sky", bg: "rgba(168,85,247,.16)", color: "#c79bff" },
+};
+
+const DATA = [
+  { era: "Geneza", sub: "od prehistorii do lat 90.", items: [
+    { id: "eyes-wakanda", t: "Oczy Wakandy", o: "Eyes of Wakanda", y: "1260 p.n.e.–1896", type: "serial", p: "disney" },
+    { id: "cap1", t: "Kapitan Ameryka: Pierwsze starcie", o: "The First Avenger", y: "1943–45", type: "film", p: "disney", is: true },
+    { id: "agent-carter", t: "Agentka Carter (sez. 1–2)", o: "Agent Carter", y: "1946–47", type: "serial", p: "disney" },
+    { id: "captain-marvel", t: "Kapitan Marvel", o: "Captain Marvel", y: "1995", type: "film", p: "disney", is: true },
+  ]},
+  { era: "Narodziny Avengers", sub: "2008–2012", items: [
+    { id: "ironman1", t: "Iron Man", o: "Iron Man", y: "2008", type: "film", p: "disney", is: true },
+    { id: "ironman2", t: "Iron Man 2", o: "Iron Man 2", y: "2010", type: "film", p: "disney", is: true },
+    { id: "hulk", t: "Niesamowity Hulk", o: "The Incredible Hulk", y: "2010", type: "film", p: "disney", is: true, note: "Prawa Universal – bywa okresowo zdejmowany" },
+    { id: "thor1", t: "Thor", o: "Thor", y: "2010", type: "film", p: "disney", is: true },
+    { id: "avengers1", t: "Avengers", o: "The Avengers", y: "2012", type: "film", p: "disney", is: true, dd: true },
+  ]},
+  { era: "Faza druga", sub: "2013–2015", items: [
+    { id: "ironman3", t: "Iron Man 3", o: "Iron Man 3", y: "2013", type: "film", p: "disney", is: true },
+    { id: "thor2", t: "Thor: Mroczny świat", o: "The Dark World", y: "2013", type: "film", p: "disney", is: true },
+    { id: "cap2", t: "Kapitan Ameryka: Zimowy żołnierz", o: "The Winter Soldier", y: "2014", type: "film", p: "disney", is: true },
+    { id: "gotg1", t: "Strażnicy Galaktyki", o: "Guardians of the Galaxy", y: "2014", type: "film", p: "disney", is: true },
+    { id: "gotg2", t: "Strażnicy Galaktyki vol. 2", o: "Vol. 2", y: "2014", type: "film", p: "disney", is: true },
+    { id: "groot", t: "Jestem Groot", o: "I Am Groot", y: "2014", type: "serial", p: "disney" },
+    { id: "daredevil1", t: "Daredevil (sez. 1)", o: "Daredevil", y: "2014", type: "serial", p: "disney" },
+    { id: "jessica1", t: "Jessica Jones (sez. 1)", o: "Jessica Jones", y: "2015", type: "serial", p: "disney" },
+    { id: "ultron", t: "Avengers: Czas Ultrona", o: "Age of Ultron", y: "2015", type: "film", p: "disney", is: true, dd: true },
+    { id: "antman1", t: "Ant-Man", o: "Ant-Man", y: "2015", type: "film", p: "disney", is: true },
+    { id: "daredevil2", t: "Daredevil (sez. 2)", o: "Daredevil", y: "2015", type: "serial", p: "disney" },
+    { id: "lukecage1", t: "Luke Cage (sez. 1)", o: "Luke Cage", y: "2015", type: "serial", p: "disney" },
+  ]},
+  { era: "Droga do wojny", sub: "2016–2017", items: [
+    { id: "civilwar", t: "Kapitan Ameryka: Wojna bohaterów", o: "Civil War", y: "2016", type: "film", p: "disney", is: true },
+    { id: "ironfist1", t: "Iron Fist (sez. 1)", o: "Iron Fist", y: "2016", type: "serial", p: "disney" },
+    { id: "defenders", t: "The Defenders", o: "The Defenders", y: "2016", type: "serial", p: "disney" },
+    { id: "spiderman-hc", t: "Spider-Man: Homecoming", o: "Homecoming", y: "2016", type: "film", p: "netflix", is: true },
+    { id: "punisher1", t: "Punisher (sez. 1)", o: "The Punisher", y: "2016", type: "serial", p: "disney" },
+    { id: "blackwidow", t: "Czarna Wdowa", o: "Black Widow", y: "2016", type: "film", p: "disney", is: true },
+    { id: "strange1", t: "Doktor Strange", o: "Doctor Strange", y: "2016–17", type: "film", p: "disney", is: true },
+    { id: "blackpanther", t: "Czarna Pantera", o: "Black Panther", y: "2017", type: "film", p: "disney", is: true },
+    { id: "jessica2", t: "Jessica Jones (sez. 2)", o: "Jessica Jones", y: "2017", type: "serial", p: "disney" },
+    { id: "lukecage2", t: "Luke Cage (sez. 2)", o: "Luke Cage", y: "2017", type: "serial", p: "disney" },
+    { id: "ironfist2", t: "Iron Fist (sez. 2)", o: "Iron Fist", y: "2017", type: "serial", p: "disney" },
+    { id: "daredevil3", t: "Daredevil (sez. 3)", o: "Daredevil", y: "2017", type: "serial", p: "disney" },
+    { id: "punisher2", t: "Punisher (sez. 2)", o: "The Punisher", y: "2017", type: "serial", p: "disney" },
+    { id: "jessica3", t: "Jessica Jones (sez. 3)", o: "Jessica Jones", y: "2017", type: "serial", p: "disney" },
+  ]},
+  { era: "Saga Nieskończoności – finał", sub: "2017–2023", items: [
+    { id: "ragnarok", t: "Thor: Ragnarok", o: "Ragnarok", y: "2017–18", type: "film", p: "disney", is: true },
+    { id: "antman2", t: "Ant-Man i Osa", o: "Ant-Man and the Wasp", y: "2018", type: "film", p: "disney", is: true },
+    { id: "infinitywar", t: "Avengers: Wojna bez granic", o: "Infinity War", y: "2018", type: "film", p: "disney", is: true, dd: true },
+    { id: "endgame", t: "Avengers: Koniec gry", o: "Endgame", y: "2018–23", type: "film", p: "disney", is: true, dd: true },
+  ]},
+  { era: "Saga Multiwersum", sub: "po Blipie · 2023", items: [
+    { id: "wandavision", t: "WandaVision", o: "WandaVision", y: "2023", type: "serial", p: "disney", dd: true },
+    { id: "loki1", t: "Loki (sez. 1)", o: "Loki", y: "2023 / 2012", type: "serial", p: "disney", dd: true },
+    { id: "loki2", t: "Loki (sez. 2)", o: "Loki", y: "2023", type: "serial", p: "disney", dd: true },
+  ]},
+  { era: "Saga Multiwersum", sub: "2024", items: [
+    { id: "shangchi", t: "Shang-Chi i legenda dziesięciu pierścieni", o: "Shang-Chi", y: "2024", type: "film", p: "disney", dd: true },
+    { id: "deadpool-wolverine", t: "Deadpool & Wolverine", o: "Deadpool & Wolverine", y: "2024", type: "film", p: "disney", dd: true },
+    { id: "falcon-ws", t: "Falcon i Zimowy żołnierz", o: "Falcon & Winter Soldier", y: "2024", type: "serial", p: "disney", dd: true },
+    { id: "spiderman-ffh", t: "Spider-Man: Daleko od domu", o: "Far From Home", y: "2024", type: "film", p: "netflix", note: "Epilog Sagi Nieskończoności" },
+    { id: "spiderman-nwh", t: "Spider-Man: Bez drogi do domu", o: "No Way Home", y: "2024", type: "film", p: "wow", dd: true },
+    { id: "eternals", t: "Eternals", o: "Eternals", y: "2024", type: "film", p: "disney", dd: true },
+    { id: "hawkeye", t: "Hawkeye", o: "Hawkeye", y: "2024", type: "serial", p: "disney", dd: true },
+    { id: "strange2", t: "Doktor Strange w multiwersum obłędu", o: "Multiverse of Madness", y: "2024", type: "film", p: "disney", dd: true },
+  ]},
+  { era: "Saga Multiwersum", sub: "2025", items: [
+    { id: "moonknight", t: "Moon Knight", o: "Moon Knight", y: "2025", type: "serial", p: "disney", dd: true },
+    { id: "wakanda-forever", t: "Czarna Pantera: Wakanda w moim sercu", o: "Wakanda Forever", y: "2025", type: "film", p: "disney", dd: true },
+    { id: "echo", t: "Echo", o: "Echo", y: "2025", type: "serial", p: "disney", dd: true },
+    { id: "shehulk", t: "Mecenas She-Hulk", o: "She-Hulk", y: "2025", type: "serial", p: "disney", dd: true },
+    { id: "msmarvel", t: "Ms. Marvel", o: "Ms. Marvel", y: "2025", type: "serial", p: "disney", dd: true },
+    { id: "marvels", t: "The Marvels", o: "The Marvels", y: "2025", type: "film", p: "disney", dd: true },
+    { id: "thor4", t: "Thor: Miłość i grom", o: "Love and Thunder", y: "2025", type: "film", p: "disney", dd: true },
+    { id: "ironheart", t: "Ironheart", o: "Ironheart", y: "2025", type: "serial", p: "disney", dd: true },
+    { id: "werewolf", t: "Wilkołak nocą", o: "Werewolf by Night", y: "2025", type: "serial", p: "disney", dd: true },
+    { id: "gotg-holiday", t: "Strażnicy Galaktyki: Świąteczny special", o: "Holiday Special", y: "2025", type: "serial", p: "disney", dd: true },
+    { id: "ff4", t: "Fantastyczna Czwórka: Pierwsze kroki", o: "First Steps", y: "Earth-828", type: "film", p: "disney", dd: true, note: "Alternatywna oś (Earth-828) – wprost prowadzi do Doomsday" },
+    { id: "wonderman", t: "Wonder Man", o: "Wonder Man", y: "2025–27", type: "serial", p: "disney", dd: true },
+  ]},
+  { era: "Saga Multiwersum", sub: "2026–2027", items: [
+    { id: "quantumania", t: "Ant-Man i Osa: Kwantomania", o: "Quantumania", y: "2026", type: "film", p: "disney", dd: true },
+    { id: "gotg3", t: "Strażnicy Galaktyki vol. 3", o: "Vol. 3", y: "2026", type: "film", p: "disney", dd: true },
+    { id: "secret-invasion", t: "Tajna inwazja", o: "Secret Invasion", y: "2026", type: "serial", p: "disney", dd: true },
+    { id: "agatha", t: "Agatha All Along", o: "Agatha All Along", y: "2026", type: "serial", p: "disney", dd: true },
+    { id: "born-again1", t: "Daredevil: Odrodzenie (sez. 1)", o: "Born Again", y: "2026–27", type: "serial", p: "disney", dd: true },
+    { id: "brave-new-world", t: "Kapitan Ameryka: Nowy wspaniały świat", o: "Brave New World", y: "2026–27", type: "film", p: "disney", dd: true },
+    { id: "thunderbolts", t: "Thunderbolts*", o: "Thunderbolts*", y: "2027", type: "film", p: "disney", dd: true },
+    { id: "punisher-special", t: "Punisher: One Last Kill", o: "Special", y: "2027", type: "serial", p: "disney", dd: true },
+    { id: "born-again2", t: "Daredevil: Odrodzenie (sez. 2)", o: "Born Again", y: "2027", type: "serial", p: "disney", dd: true },
+  ]},
+];
+
+const ALL_ITEMS = DATA.flatMap((g) => g.items);
+const TOTAL = ALL_ITEMS.length;
+const DD_TOTAL = ALL_ITEMS.filter((i) => i.dd).length;
+const IS_TOTAL = ALL_ITEMS.filter((i) => i.is).length;
+const GOLD = "#f0b232";
+const CYAN = "#5fd6df";
+
+function App() {
+  const [watched, setWatched] = useState(new Set());
+  const [loaded, setLoaded] = useState(false);
+  const [filter, setFilter] = useState("all");
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) setWatched(new Set(JSON.parse(raw)));
+    } catch (e) {}
+    setLoaded(true);
+  }, []);
+
+  const persist = (set) => {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...set])); } catch (e) {}
+  };
+
+  const toggle = (id) => {
+    setWatched((prev) => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      persist(next);
+      return next;
+    });
+  };
+
+  const resetAll = () => {
+    if (!window.confirm("Odznaczyć wszystkie obejrzane pozycje?")) return;
+    const empty = new Set();
+    setWatched(empty);
+    persist(empty);
+  };
+
+  const count = watched.size;
+  const pct = Math.round((count / TOTAL) * 100);
+  const ddDone = ALL_ITEMS.filter((i) => i.dd && watched.has(i.id)).length;
+  const isDone = ALL_ITEMS.filter((i) => i.is && watched.has(i.id)).length;
+
+  const groups = useMemo(() => {
+    return DATA.map((g) => ({
+      ...g,
+      items: g.items.filter((it) => {
+        const w = watched.has(it.id);
+        if (filter === "watched") return w;
+        if (filter === "unwatched") return !w;
+        if (filter === "doomsday") return it.dd;
+        if (filter === "infinity") return it.is;
+        return true;
+      }),
+    })).filter((g) => g.items.length > 0);
+  }, [filter, watched]);
+
+  const focused = filter === "doomsday" || filter === "infinity";
+
+  return (
+    <div className="min-h-screen text-zinc-100" style={{background:"#08080b"}}>
+      <div className="pointer-events-none fixed inset-0 z-0" style={{ background: "radial-gradient(1200px 500px at 50% -10%, rgba(230,36,41,.22), transparent 60%)" }} />
+      <div className="relative z-10 max-w-3xl mx-auto px-4 pb-24">
+        <header className="pt-8 pb-5">
+          <p className="text-[#e62429] font-extrabold tracking-[.35em] text-xs uppercase mb-2">Marvel Cinematic Universe</p>
+          <h1 className="display text-5xl sm:text-6xl leading-[0.92] text-white">Lista chronologiczna</h1>
+          <p className="text-zinc-400 mt-3 text-sm leading-relaxed">
+            Oś czasu wydarzeń · platformy dla <span className="text-zinc-200">Niemiec</span>. Plakietki: <span className="inline-flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle" style={{ background: "rgba(95,214,223,.14)", color: CYAN }}><InfinityIcon size={10} /> Infinity</span> = Saga Nieskończoności, <span className="inline-flex items-center gap-1 ml-1 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle" style={{ background: "rgba(240,178,50,.16)", color: GOLD }}><Zap size={10} fill={GOLD} /> Doomsday</span> = Saga Multiwersum.
+          </p>
+          <div className="flex flex-wrap items-center gap-2 mt-4">
+            {Object.values(PLATFORMS).map((pl) => (
+              <span key={pl.label} className="text-[11px] font-bold px-2.5 py-1 rounded-md" style={{ background: pl.bg, color: pl.color }}>{pl.label}</span>
+            ))}
+          </div>
+        </header>
+
+        <div className="sticky top-0 z-20 -mx-4 px-4 py-3 backdrop-blur border-b border-white/5" style={{background:"rgba(8,8,11,.92)"}}>
+          <div className="flex items-end justify-between mb-2">
+            <div className="flex items-baseline gap-2">
+              <span className="display text-3xl" style={{color:GOLD}}>{count}</span>
+              <span className="text-zinc-500 text-sm">/ {TOTAL}</span>
+            </div>
+            <span className="text-[11px] text-zinc-500 flex items-center gap-2">
+              <span className="flex items-center gap-1" style={{ color: CYAN }}><InfinityIcon size={12} /> {isDone}/{IS_TOTAL}</span>
+              <span className="text-zinc-700">·</span>
+              <span className="flex items-center gap-1" style={{ color: GOLD }}><Zap size={12} fill={GOLD} /> {ddDone}/{DD_TOTAL}</span>
+            </span>
+          </div>
+          <div className="h-2 rounded-full overflow-hidden" style={{background:"rgba(255,255,255,.08)"}}>
+            <div className="h-full rounded-full transition-all duration-500" style={{ width: pct + "%", background: "linear-gradient(90deg,#e62429,#f0b232)" }} />
+          </div>
+          <div className="flex items-center gap-2 mt-3 flex-wrap">
+            {[
+              ["all", "Wszystko", null],
+              ["unwatched", "Do obejrzenia", null],
+              ["watched", "Obejrzane", null],
+              ["infinity", "∞ Infinity Saga", CYAN],
+              ["doomsday", "⚡ Doomsday", GOLD],
+            ].map(([k, label, c]) => (
+              <button key={k} onClick={() => setFilter(k)}
+                className="text-xs font-bold px-3 py-1.5 rounded-full transition"
+                style={filter === k ? { background: c || "#e62429", color: c ? "#000" : "#fff" } : { background: "rgba(255,255,255,.08)", color: "#d4d4d8" }}>
+                {label}
+              </button>
+            ))}
+            <button onClick={resetAll} className="ml-auto text-xs font-semibold text-zinc-500">Wyczyść</button>
+          </div>
+        </div>
+
+        {!loaded ? (
+          <div className="flex items-center justify-center gap-2 text-zinc-500 py-20"><Loader2 className="animate-spin" size={18} /> Wczytywanie…</div>
+        ) : (
+          <div className="mt-6 space-y-8">
+            {groups.map((g, gi) => (
+              <section key={gi}>
+                <div className="flex items-baseline gap-3 mb-3">
+                  <h2 className="display text-xl text-white uppercase">{g.era}</h2>
+                  <span className="text-xs font-bold tracking-wide" style={{color:GOLD}}>{g.sub}</span>
+                </div>
+                <ul className="space-y-2">
+                  {g.items.map((it) => {
+                    const w = watched.has(it.id);
+                    const pl = PLATFORMS[it.p];
+                    let bg = "rgba(255,255,255,.04)", bd = "rgba(255,255,255,.1)";
+                    if (w) { bg = "rgba(255,255,255,.02)"; bd = "rgba(255,255,255,.05)"; }
+                    else if (it.dd) { bg = "rgba(240,178,50,.04)"; bd = "rgba(240,178,50,.35)"; }
+                    else if (it.is) { bg = "rgba(95,214,223,.04)"; bd = "rgba(95,214,223,.3)"; }
+                    return (
+                      <li key={it.id}>
+                        <button onClick={() => toggle(it.id)}
+                          className="w-full flex items-center gap-3 text-left rounded-xl px-3 py-3 transition"
+                          style={{background:bg, border:"1px solid " + bd}}>
+                          <span className="shrink-0 grid place-items-center w-6 h-6 rounded-full transition" style={{
+                            background: w ? "#e62429" : "transparent",
+                            border: "2px solid " + (w ? "#e62429" : "#52525b")
+                          }}>
+                            {w && <Check size={15} className="text-white pop" />}
+                          </span>
+                          <span className="flex-1 min-w-0">
+                            <span className="flex items-center gap-1.5 flex-wrap">
+                              <span className="font-bold leading-snug" style={{
+                                color: w ? "#71717a" : "#f4f4f5",
+                                textDecoration: w ? "line-through" : "none"
+                              }}>{it.t}</span>
+                              {it.is && (
+                                <span className="shrink-0 inline-flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.5 rounded" style={{ background: "rgba(95,214,223,.14)", color: CYAN, opacity: w ? 0.5 : 1 }}><InfinityIcon size={10} /> Infinity</span>
+                              )}
+                              {it.dd && (
+                                <span className="shrink-0 inline-flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.5 rounded" style={{ background: "rgba(240,178,50,.16)", color: GOLD, opacity: w ? 0.5 : 1 }}><Zap size={10} fill={GOLD} /> Doomsday</span>
+                              )}
+                            </span>
+                            <span className="flex items-center gap-2 mt-1">
+                              <span className="shrink-0 text-zinc-600">{it.type === "film" ? <Film size={12} /> : <Tv2 size={12} />}</span>
+                              <span className="text-xs text-zinc-500 truncate">{it.o}</span>
+                              <span className="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded" style={{ background: pl.bg, color: pl.color, opacity: w ? 0.5 : 1 }}>{pl.label}</span>
+                            </span>
+                            {it.note && <span className="block text-[10px] mt-1" style={{color:"rgba(245,158,11,.7)"}}>⚠ {it.note}</span>}
+                          </span>
+                          <span className="shrink-0 text-xs font-semibold text-zinc-500 tabular-nums w-16 text-right">{it.y}</span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            ))}
+            {groups.length === 0 && <p className="text-center text-zinc-500 py-16 text-sm">Nic tu nie ma w tym filtrze 🎬</p>}
+          </div>
+        )}
+
+        {loaded && !focused && (
+          <section className="mt-12">
+            <div className="flex items-baseline gap-3 mb-1">
+              <h2 className="display text-xl text-white uppercase">Zaplanowane</h2>
+              <span className="text-xs font-bold tracking-wide" style={{color:GOLD}}>jeszcze nie premiera</span>
+            </div>
+            <p className="text-xs text-zinc-500 mb-4">Daty potrafią się przesuwać. Filmy = kino, seriale = Disney+.</p>
+            <div className="overflow-hidden rounded-xl" style={{border:"1px solid rgba(255,255,255,.1)"}}>
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="text-zinc-400 text-[11px] uppercase tracking-wide" style={{background:"rgba(255,255,255,.05)"}}>
+                    <th className="text-left font-bold px-3 py-2.5">Tytuł</th>
+                    <th className="text-left font-bold px-2 py-2.5 hidden sm:table-cell">Gdzie</th>
+                    <th className="text-right font-bold px-3 py-2.5">Premiera</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { t: "X-Men '97 (sez. 2)", type: "serial", w: "Disney+", d: "lato 2026" },
+                    { t: "Spider-Man: Brand New Day", type: "film", w: "kino", d: "31 lip 2026" },
+                    { t: "VisionQuest", type: "serial", w: "Disney+", d: "14 paź 2026" },
+                    { t: "Avengers: Doomsday", type: "film", w: "kino", d: "18 gru 2026", hot: true },
+                    { t: "Daredevil: Odrodzenie (sez. 3)", type: "serial", w: "Disney+", d: "marzec 2027" },
+                    { t: "Avengers: Secret Wars", type: "film", w: "kino", d: "17 gru 2027" },
+                    { t: "Czarna Pantera 3", type: "film", w: "kino", d: "po Secret Wars (TBA)" },
+                  ].map((r, i) => (
+                    <tr key={i} style={{borderTop:"1px solid rgba(255,255,255,.05)"}}>
+                      <td className="px-3 py-2.5">
+                        <span className="flex items-center gap-2">
+                          <span className="text-zinc-600 shrink-0">{r.type === "film" ? <Film size={12} /> : <Tv2 size={12} />}</span>
+                          <span className="font-semibold" style={{color: r.hot ? GOLD : "#f4f4f5"}}>{r.t}</span>
+                        </span>
+                        <span className="sm:hidden text-[11px] text-zinc-500 ml-5">{r.w}</span>
+                      </td>
+                      <td className="px-2 py-2.5 text-zinc-400 hidden sm:table-cell">{r.w}</td>
+                      <td className="px-3 py-2.5 text-right font-semibold whitespace-nowrap" style={{color:GOLD}}>{r.d}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+
+        <footer className="mt-12 text-[11px] text-zinc-600 leading-relaxed space-y-2">
+          <p><strong style={{ color: CYAN }}>∞ Infinity Saga (pełny wariant):</strong> komplet filmów Faz 1–3 — od Iron Mana po Koniec gry, ze wszystkimi solowymi originami. Daleko od domu to epilog (po Endgame).</p>
+          <p><strong style={{ color: GOLD }}>⚡ Doomsday (pełny wariant):</strong> cała Saga Multiwersum (Fazy 4–6) — od WandaVision i No Way Home po Fantastyczną Czwórkę.</p>
+          <p><strong className="text-zinc-500">Spider-Man (Sony):</strong> Homecoming i Daleko od domu – Netflix DE; Bez drogi do domu – WOW/Sky. Na Disney+ w Niemczech polski dubbing/napisy bywają tylko na profilu z regionem PL.</p>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
